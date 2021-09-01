@@ -1,16 +1,84 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+:root {
+	--color-primary-yellow: #f7af35; 
+	--color-secondary-yellow: #f6c064;
+	--color-tertiary-yellow: #f4d193;
+	--color-quaternary-yellow: #f3e1c3;
+	--color-primary-black: #313131;
+	--color-secondary-black: #2c2c2c;
+	--text-color: #404040;
+	--color-primary-grey: #f2f2f2;
+	--color-background: #FFFBF5;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html { 
+    font-size: 93.75%; /* 15px */ 
 }
 
 * {
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box ;
+}
+
+html, body {
+	background-color: var(--color-background);
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* ------- Text-box ------- */
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	color: var(--text-color);
+
+}
+
+a {
+	color: var(--color-secondary-yellow);
+}
+
+ul li {
+	list-style: none;
+}
+
+.button {
+	min-width: 145px;
+    margin: 24px 0;
+    height: 50px;
+    border-radius: 8px;
+    font-weight: 500px;
+    background: #fff;
+    padding: 0 32px;
+
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 16px;
+	text-transform: uppercase;
+    color: var(--color-primary-yellow);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    border: 0;
+
+    transition: filter 0.2s;
+	filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.161));
+}
+
+.button:hover {
+	background: var(--color-primary-yellow);
+	color: #fff;
+}
+
+
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
 }
