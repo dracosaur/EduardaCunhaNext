@@ -2,7 +2,7 @@ import Image from 'next/image';
 import profileImage from '../../../public/Foto Duda Inteira.png'
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import { LineMedium } from '../../components/Line';
+import { LineMedium } from '../../../components/Line';
 
 const Container = styled.header`
 padding: 60px 10px 30px;

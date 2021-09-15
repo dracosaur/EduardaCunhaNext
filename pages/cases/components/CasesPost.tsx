@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core";
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import { LineSmall } from "../../components/Line";
+import { LineSmall } from "../../../components/Line";
 
 const Container = styled.div`
     display: flex;

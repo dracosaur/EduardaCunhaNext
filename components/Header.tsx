@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import headerImage from '../../public/Logo Branco.png'
+import headerImage from '../public/Logo Branco.png';
 import styled from 'styled-components';
 import { MenuComponent } from './Menu';
 

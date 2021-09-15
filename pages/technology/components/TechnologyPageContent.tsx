@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import { LineMedium, LineSmall } from '../../components/Line';
+import { LineMedium, LineSmall } from '../../../components/Line';
 import blogImage from '../../../public/Blog Referencia 1.png';
 
 

@@ -1,8 +1,19 @@
+import { useEffect, useState } from 'react';
+import api from '../../../services/api';
 import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
-import BlogPost from './BlogPost';
-import { LineSmall } from '../../components/Line';
+import  BlogPost  from '../posts/BlogPost';
+import { LineSmall } from '../../../components/Line';
 
+export interface PostProps {
+    _id: string;
+    coverImage: string;
+    Titulo: string;
+}
+
+type BlogContentProps = {
+    showTitle: boolean;
+};
 
 const BlogContainer = styled.div`
     display: flex;
@@ -30,22 +41,30 @@ const TitleBlog = styled.div`
     }
 `
 
-export function BlogContent(){
+export function BlogContent(props: BlogContentProps){
+    const {showTitle} = props;
+    const [posts, setPosts] = useState<PostProps[]>([]);
+
+    useEffect(() => {
+        api.get('/getAllPosts').then(response => {
+            setPosts(response.data.posts)})
+    }, []);
+
     return(
         <BlogContainer>
-            <TitleBlog>
-                <p>Blog</p>
+           {showTitle && 
+           <TitleBlog>
+                 <p>Blog</p>
                <LineSmall />
             </TitleBlog>
-            <Grid>
-               <BlogPost />
-            </Grid>
-            <Grid>
-               <BlogPost />
-            </Grid>
-            <Grid>
-               <BlogPost />
-            </Grid>
+        }   
+            {
+                posts?.map(post => (
+                    <Grid key={post._id}>
+                        <BlogPost Titulo={post.Titulo} coverImage={post.coverImage} _id={post._id} />
+                    </Grid>
+                ))
+            }
         </BlogContainer>
     )
 }

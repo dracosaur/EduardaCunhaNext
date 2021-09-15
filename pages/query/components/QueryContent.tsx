@@ -1,6 +1,6 @@
-import { LineSmall } from '../../components/Line';
+import { LineSmall } from '../../../components/Line';
 import styled from 'styled-components';
-import { Button } from '../../components/Button';
+import { Button } from '../../../components/Button';
 
 
 

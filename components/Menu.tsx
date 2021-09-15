@@ -6,13 +6,12 @@ import Fade from '@material-ui/core/Fade';
 import { grey } from '@material-ui/core/colors';
 import MenuIcon from '@material-ui/icons/Menu';
 import styled from 'styled-components';
-
+import Link from 'next/link';
 
 const Ancor = styled.a`
   color: #313131;
   text-decoration: none;
 `;
-
 
 export function MenuComponent() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -39,12 +38,12 @@ export function MenuComponent() {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem onClick={handleClose}><Ancor href='/'>Home</Ancor></MenuItem>
-        <MenuItem onClick={handleClose}><Ancor href='/biography'>Biografia</Ancor></MenuItem>
-        <MenuItem onClick={handleClose}><Ancor href='/blog'>Blog</Ancor></MenuItem>
-        <MenuItem onClick={handleClose}><Ancor href='/technology'>Tecnologias</Ancor></MenuItem>
-        <MenuItem onClick={handleClose}><Ancor href='/cases'>Cases</Ancor></MenuItem>
-        <MenuItem onClick={handleClose}><Ancor href='/query'>Consulta</Ancor></MenuItem>
+        <MenuItem onClick={handleClose}><Link href='/'><Ancor>Home</Ancor></Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link href='/biography'><Ancor>Biografia</Ancor></Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link href='/blog'><Ancor>Blog</Ancor></Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link href='/technology'><Ancor>Tecnologias</Ancor></Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link href='/cases'><Ancor>Cases</Ancor></Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link href='/query'><Ancor>Consulta</Ancor></Link></MenuItem>
       </Menu>
     </div>
   )

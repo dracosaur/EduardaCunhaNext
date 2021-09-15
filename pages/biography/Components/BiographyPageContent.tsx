@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import { LineMedium, LineSmall } from '../../components/Line';
+import { LineMedium, LineSmall } from '../../../components/Line';
 import profileImage from '../../../public/Foto Duda Inteira.png'
 
 const Container = styled.div`
@@ -19,7 +19,7 @@ const Container = styled.div`
     }
 `
 
-const TitleBlog = styled.h1`
+const TitleBio = styled.h1`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,10 +65,10 @@ const TextBox = styled.text`
 export function BiographyPageContent(){
     return(
         <Container>
-            <TitleBlog>
+            <TitleBio>
                 <p>Biografia</p>
             <LineSmall />
-            </TitleBlog>
+            </TitleBio>
             <ImageBox>
                 <Image src={profileImage} alt="Eduarda Cunha" objectFit='fill'/>
             </ImageBox>

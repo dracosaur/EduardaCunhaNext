@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Button } from '../../components/Button';
-import { LineSmall } from '../../components/Line';
+import { Button } from '../../../components/Button';
+import { LineSmall } from '../../../components/Line';
 import { CasesPost } from './CasesPost';
 
 const CasesContainer = styled.div`

@@ -1,8 +1,11 @@
-import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import api from '../../../services/api';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import { LineMedium, LineSmall } from '../../components/Line';
-import blogImage from '../../../public/Blog Referencia 1.png';
+import { LineSmall } from '../../../components/Line';
+import { BlogContent, PostProps } from './BlogContent';
+import Grid from '@material-ui/core/Grid';
+import BlogPost from '../posts/BlogPost';
 
 
 const Container = styled.div`
@@ -53,31 +56,17 @@ const ImageBox = styled.div`
     `}
 `
 
-const TextBox = styled.text`
-    margin: 30px 15% 60px;
-    font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 400;
-    color: #808080;
-    display: flex;
-    text-align: center;
-`
+export function BlogPageContent(post: PostProps) {
 
-export function BlogPageContent() {
     return (
         <Container>
             <TitleBlog>
                 <p>Blog</p>
-               <LineSmall />
+                <LineSmall />
             </TitleBlog>
-            <ImageBox>
-                <Image loading='lazy' src={blogImage} alt="Blog Imagem" objectFit='fill' />
-            </ImageBox>
-            <LineMedium />
-            <p>Cuide da sua voz</p>
-            <TextBox>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, dignissimos fuga, tempore perspiciatis reiciendis adipisci expedita distinctio repellat amet nostrum tenetur nihil atque enim alias facere iste? Quae, minima repudiandae.
-            </TextBox>
+            <Grid>
+                <BlogContent showTitle={false} />
+            </Grid>
         </Container>
     )
 }

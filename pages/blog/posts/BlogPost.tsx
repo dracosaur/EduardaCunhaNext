@@ -1,21 +1,11 @@
 import styled from 'styled-components';
-import { GetStaticProps } from 'next';
-import Link from '@material-ui/core/Link';
-import Image from 'next/image';
-import blogImage from '../../../public/Blog Referencia 1.png';
 import { Typography } from '@material-ui/core';
 import { breakpoint } from 'styled-components-breakpoint';
-import { LineGrey } from '../../components/Line';
+import { LineGrey } from '../../../components/Line';
+import { PostProps } from '../components/BlogContent';
+import Link from 'next/link';
 
-interface PostProps {
-    posts: {
-        _id: string;
-        image: string;
-        Titulo: string;
-    }
-}
-
-const Container = styled.div`
+const Container = styled.a`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,9 +25,14 @@ const ImageBoxBlog = styled.div`
   `}
 
     ${breakpoint('desktop')`
-      width: 500px;
-      height: 400px;
+        width: 877px;
+        height: 388px;
     `}
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 `
 
 const Box = styled.div`
@@ -56,30 +51,31 @@ const Box = styled.div`
     }   
 `
 
-export default function BlogPost(posts: any){
+const TextBox = styled.text`
+    margin: 30px 15% 60px;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 400;
+    color: #808080;
+    display: flex;
+    text-align: center;
+`
+
+export default function BlogPost({_id, coverImage, Titulo}: PostProps){
+
     return (
+        <Link href={`/blog/posts/${_id}`}>
         <Container>
             <ImageBoxBlog>
-                <Image loading='lazy' src={blogImage} alt="Blog Imagem" objectFit='fill' />
+                <img src={coverImage} alt={Titulo} />
             </ImageBoxBlog>
             <Box>
-                <Typography variant="body1">
-                    <p>Cuide da sua voz!</p>
-                </Typography>
-                <LineGrey />
+            <Typography variant="body1">
+                 <p>{Titulo}</p>
+            </Typography>
+            <LineGrey />
             </Box>
         </Container>
+        </Link>
     )
-}
-
-
-export const getStaticProps: GetStaticProps = async () => {
-    
-
-    console.log('opa');
-    const res = await fetch('/api/getAllPosts');
-
-    const posts = res.json();
-
-    return posts;
 }

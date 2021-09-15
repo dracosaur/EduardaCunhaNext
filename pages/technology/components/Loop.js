@@ -43,8 +43,19 @@ const ImageBox = styled.div`
   }
 `
 
+const TextSpacing = styled.p`
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 24px;
+  color: #b7b7b7;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+`
+
 const ImageTest = styled.div`
-  height: 100vh;
+  height: 235px;
   width: 100%;
   background: #1d1e1c;
 `
@@ -64,21 +75,19 @@ export default class CenterMode extends Component {
         <Slider {...settings}>
           <ImageBox>
             <ImageTest />
+            <TextSpacing>Teste 1</TextSpacing>  
           </ImageBox>
           <ImageBox>
             <ImageTest />
+            <TextSpacing>Teste 2</TextSpacing>  
           </ImageBox>
           <ImageBox>
             <ImageTest />
+            <TextSpacing>Teste 3</TextSpacing>  
           </ImageBox>
           <ImageBox>
             <ImageTest />
-          </ImageBox>
-          <ImageBox>
-            <ImageTest />
-          </ImageBox>
-          <ImageBox>
-            <ImageTest />
+            <TextSpacing>Teste 4</TextSpacing>  
           </ImageBox>
         </Slider>
       </LoopContainer>

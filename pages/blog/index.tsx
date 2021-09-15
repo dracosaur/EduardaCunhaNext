@@ -1,15 +1,12 @@
-import { Header } from "../components/Header"
-import { Footer } from '../components/Footer'
 import { BlogPageContent } from './components/BlogPageContent'
 import { QueryContent } from "../query/components/QueryContent"
+import { PostProps } from './components/BlogContent';
 
-export default function Blog() {
+export default function Blog(post: PostProps) {
     return(
         <div>
-            <Header />
-            <BlogPageContent />
+            <BlogPageContent Titulo={post.Titulo} coverImage={post.coverImage} _id={post._id}/>
             <QueryContent />
-            <Footer />
         </div>
     )
 }

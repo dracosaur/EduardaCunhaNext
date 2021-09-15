@@ -1,8 +1,8 @@
 import Loop from './Loop';
 import styled from 'styled-components';
-import {Button} from '../../components/Button';
+import {Button} from '../../../components/Button';
 import { breakpoint } from 'styled-components-breakpoint';
-import { LineSmall } from '../../components/Line';
+import { LineSmall } from '../../../components/Line';
 
 const TechnologyContainer = styled.div`
     display:  flex;
@@ -49,14 +49,7 @@ const TitleTechnology = styled.div`
     }
 `
 
-const TextSpacing = styled.p`
-  margin: 60px 0 24px;
-  color: #b7b7b7;
-  font-weight: 700;
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-`
+
 
 
 export function TechnologyContent(){
@@ -67,7 +60,6 @@ export function TechnologyContent(){
         <LineSmall />
       </TitleTechnology>
       <Loop />
-      <TextSpacing>Eletroestimulação</TextSpacing>  
       <Button>Conheça mais</Button>
     </TechnologyContainer>
     )
