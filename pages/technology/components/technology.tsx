@@ -56,7 +56,7 @@ export function TechnologyContent(){
     return (
     <TechnologyContainer>
       <TitleTechnology>
-        <p>Equipamentos e softwares</p>
+        <p>Recursos</p>
         <LineSmall />
       </TitleTechnology>
       <Loop />

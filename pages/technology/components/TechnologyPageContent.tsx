@@ -62,7 +62,7 @@ export function TechnologyPageContent() {
     return (
         <Container>
             <TitleBlog>
-                <p>Tecnologias</p>
+                <p>Recursos</p>
                <LineSmall />
             </TitleBlog>
             <ImageBox>
