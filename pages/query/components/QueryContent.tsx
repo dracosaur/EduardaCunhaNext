@@ -1,6 +1,6 @@
 import { LineSmall } from '../../../components/Line';
 import styled from 'styled-components';
-import { Button } from '../../../components/Button';
+import Button from '../../../components/Button';
 
 
 
@@ -42,7 +42,7 @@ const TextBox = styled.text`
     text-align: center;
 `
 
-export function QueryContent() {
+export default function QueryContent() {
     return(
         <QueryContainer>
             <TitleQuery>

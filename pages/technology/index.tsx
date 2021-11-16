@@ -1,5 +1,5 @@
-import { QueryContent } from "../query/components/QueryContent"
-import { TechnologyPageContent } from './components/TechnologyPageContent';
+import QueryContent from "../query/components/QueryContent"
+import TechnologyPageContent from './components/TechnologyPageContent';
 
 
 export default function Blog() {

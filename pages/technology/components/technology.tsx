@@ -1,6 +1,6 @@
 import Loop from './Loop';
 import styled from 'styled-components';
-import {Button} from '../../../components/Button';
+import Button from '../../../components/Button';
 import { breakpoint } from 'styled-components-breakpoint';
 import { LineSmall } from '../../../components/Line';
 
@@ -52,7 +52,7 @@ const TitleTechnology = styled.div`
 
 
 
-export function TechnologyContent(){
+export default function TechnologyContent(){
     return (
     <TechnologyContainer>
       <TitleTechnology>

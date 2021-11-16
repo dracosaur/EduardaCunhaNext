@@ -1,4 +1,4 @@
-import { QueryContent } from "../query/components/QueryContent"
+import QueryContent from "../query/components/QueryContent"
 
 export default function Blog() {
     return(

@@ -62,7 +62,7 @@ const TextBox = styled.text`
     text-align: center;
 `
 
-export function BiographyPageContent(){
+export default function BiographyPageContent(){
     return(
         <Container>
             <TitleBio>

@@ -1,5 +1,5 @@
-import { BiographyPageContent } from './Components/BiographyPageContent'
-import { QueryContent } from "../query/components/QueryContent";
+import  BiographyPageContent  from './Components/BiographyPageContent'
+import  QueryContent  from "../query/components/QueryContent";
 
 export default function Biography(){
     return (

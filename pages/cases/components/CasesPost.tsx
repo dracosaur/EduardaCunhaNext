@@ -44,7 +44,7 @@ const CaseImage = styled.div`
     align-items: center;
 `
 
-export function CasesPost(){
+export default function CasesPost(){
     return(
         <Container>
             <Grid container className='container'>

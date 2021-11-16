@@ -47,7 +47,7 @@ const CopyrightText = styled.text`
 `
 
 
-export function Footer(){
+export default function Footer(){
     return(
         <QueryContainer>
             <h1>Entre em contato:</h1>

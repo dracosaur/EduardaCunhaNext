@@ -13,7 +13,7 @@ const Ancor = styled.a`
   text-decoration: none;
 `;
 
-export function MenuComponent() {
+export default function MenuComponent() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 

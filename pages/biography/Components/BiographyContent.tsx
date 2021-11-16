@@ -64,7 +64,7 @@ const TextBox = styled.text`
 `
 
 
-export function BiographyContent(){
+export default function BiographyContent(){
     return (
         <Container>
             <BoxImage>

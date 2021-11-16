@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Button } from '../../../components/Button';
+import  Button  from '../../../components/Button';
 import { LineSmall } from '../../../components/Line';
-import { CasesPost } from './CasesPost';
+import  CasesPost  from './CasesPost';
 
 const CasesContainer = styled.div`
     display: flex;
@@ -29,7 +29,7 @@ const TitleCases = styled.div`
     }
 `
 
-export function CasesContent(){
+export default function CasesContent(){
     return(
         <CasesContainer>
             <TitleCases>

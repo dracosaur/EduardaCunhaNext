@@ -63,7 +63,7 @@ const TextBox = styled.text`
     text-align: center;
 `
 
-export function CasesPageContent() {
+export default function CasesPageContent() {
     return (
         <Container>
             <TitleBlog>

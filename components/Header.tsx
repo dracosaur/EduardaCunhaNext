@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import headerImage from '../public/Logo Branco.png';
 import styled from 'styled-components';
-import { MenuComponent } from './Menu';
+import  MenuComponent  from './Menu';
 
 const BackgroundHeader = styled.header`
     background: #f7af35;
@@ -15,7 +15,7 @@ const MenuBar = styled.div`
     justify-content: flex-end;
 `
 
-export function Header() {
+export default function Header() {
     return(
         <BackgroundHeader>
             <Image src={headerImage} alt="Fono-Eduarda" height={111} width={157}>

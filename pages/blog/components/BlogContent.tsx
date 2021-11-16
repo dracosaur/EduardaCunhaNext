@@ -41,7 +41,7 @@ const TitleBlog = styled.div`
     }
 `
 
-export function BlogContent(props: BlogContentProps){
+export default function BlogContent(props: BlogContentProps){
     const {showTitle} = props;
     const [posts, setPosts] = useState<PostProps[]>([]);
 

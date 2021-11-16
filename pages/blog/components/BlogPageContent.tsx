@@ -3,7 +3,7 @@ import api from '../../../services/api';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 import { LineSmall } from '../../../components/Line';
-import { BlogContent, PostProps } from './BlogContent';
+import  BlogContent, {PostProps}  from './BlogContent';
 import Grid from '@material-ui/core/Grid';
 import BlogPost from '../posts/BlogPost';
 
@@ -56,7 +56,7 @@ const ImageBox = styled.div`
     `}
 `
 
-export function BlogPageContent(post: PostProps) {
+export default function BlogPageContent(post: PostProps) {
 
     return (
         <Container>
