@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { LineMedium, LineSmall } from '../../../components/Line';
+import { breakpoint } from 'styled-components-breakpoint';
 
 const Container = styled.div`
     display: flex;
@@ -35,23 +36,29 @@ const TitleBlog = styled.h1`
 `
 
 const ImageBox = styled.div`
-  aling-items: center;
-  height: 200px;
-  width: 400px;
-  background: #1d1e1c;
-  padding: 8px;
-  margin-bottom: 60px; 
+    aling-items: center;
+    height: 200px;
+    width: 320px;
+    background: #1d1e1c;
+    padding: 8px;
+    margin-bottom: 60px; 
 
+    ${breakpoint('desktop')`
+        width: 800px;
+        height: 400px;
+    `}
 `
 
-const TextBox = styled.text`
-    margin: 30px 15% 60px;
-    font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 400;
-    color: #808080;
+const Content = styled.div`
+    margin: 0px 0 60px;
     display: flex;
+    align-items: center;
     text-align: center;
+    flex-direction: column;
+
+    ${breakpoint('desktop')`
+        margin: 30px 0 100px;
+    `}
 `
 
 export default function TechnologyPageContent() {
@@ -61,14 +68,26 @@ export default function TechnologyPageContent() {
                 <p>Recursos</p>
                <LineSmall />
             </TitleBlog>
-            <ImageBox>
-                
-            </ImageBox>
-            <LineMedium />
-            <p>Eletroestimulação</p>
-            <TextBox>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, dignissimos fuga, tempore perspiciatis reiciendis adipisci expedita distinctio repellat amet nostrum tenetur nihil atque enim alias facere iste? Quae, minima repudiandae.
-            </TextBox>
+            <Content>
+                <ImageBox></ImageBox>
+                <LineMedium />
+                <p>Mindvox</p>
+            </Content>
+            <Content>
+                <ImageBox></ImageBox>
+                <LineMedium />
+                <p>Fotoestimulação</p>
+            </Content>
+            <Content>
+                <ImageBox></ImageBox>
+                <LineMedium />
+                <p>Ultrassom</p>
+            </Content>
+            <Content>
+                <ImageBox></ImageBox>
+                <LineMedium />
+                <p>Eletroestimulação</p>
+            </Content>
         </Container>
     )
 }

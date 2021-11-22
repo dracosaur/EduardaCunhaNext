@@ -58,6 +58,10 @@ const ImageTest = styled.div`
   height: 235px;
   width: 100%;
   background: #1d1e1c;
+
+  ${breakpoint('desktop')`
+    height: 450px;
+  `}
 `
 
 export default class CenterMode extends Component {
@@ -75,19 +79,19 @@ export default class CenterMode extends Component {
         <Slider {...settings}>
           <ImageBox>
             <ImageTest />
-            <TextSpacing>Teste 1</TextSpacing>  
+            <TextSpacing>Mindvox</TextSpacing>  
           </ImageBox>
           <ImageBox>
             <ImageTest />
-            <TextSpacing>Teste 2</TextSpacing>  
+            <TextSpacing>Fotoestimulação</TextSpacing>  
           </ImageBox>
           <ImageBox>
             <ImageTest />
-            <TextSpacing>Teste 3</TextSpacing>  
+            <TextSpacing>Ultrassom</TextSpacing>  
           </ImageBox>
           <ImageBox>
             <ImageTest />
-            <TextSpacing>Teste 4</TextSpacing>  
+            <TextSpacing>Eletroestimulação</TextSpacing>  
           </ImageBox>
         </Slider>
       </LoopContainer>

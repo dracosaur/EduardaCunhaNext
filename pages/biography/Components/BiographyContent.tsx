@@ -38,9 +38,19 @@ const Title = styled.h1`
     color: #404040;
     text-transform: uppercase;
 
+    p { 
+        font-size: 14px; 
+        font-weight: 600;
+    }
+
     ${breakpoint('desktop')`
         margin: 40px 0 0;
         font-size: 28px;
+
+        p { 
+            font-size: 20px; 
+            font-weight: 600;
+        }
     `}
 `
 
@@ -71,9 +81,12 @@ export default function BiographyContent(){
                 <Image src={profileImage} alt="Eduarda Cunha" objectFit='fill'/>
             </ BoxImage>
             <LineMedium />
-            <Title>Eduarda Cunha</Title>
+            <Title>
+            Eduarda Cunha
+            <p>CRFa 7 10021</p>
+            </Title>
             <TextBox>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia et beatae voluptate quo ea architecto doloribus nesciunt totam veniam dolorem dignissimos esse vel aut, repudiandae impedit ut voluptatum a iste.
+            Formada pela Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA), é preparadora vocal de cantores populares. Prepara participantes dos programas The Voice Brasil, além de atores para espetáculos teatrais cinema e filmes publicitários.
             </TextBox>
         </Container>
     );

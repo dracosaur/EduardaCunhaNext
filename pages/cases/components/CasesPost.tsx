@@ -5,10 +5,11 @@ import { LineSmall } from "../../../components/Line";
 
 const Container = styled.div`
     display: flex;
+    margin: 0 0 50px;
 
     .container {
         justify-content: center;
-        flex-wrap: nowrap
+        flex-wrap: nowrap;
     }
 
     .item {
@@ -20,6 +21,10 @@ const Container = styled.div`
         padding: 0 24px;
       `}
     }
+
+    ${breakpoint('desktop')`
+        margin: 50px 0;
+    `}
 
     p {
         padding-top: 20px;
@@ -42,6 +47,16 @@ const CaseImage = styled.div`
     height: 517px;
     width: 187.5px;
     align-items: center;
+    
+    ${breakpoint('tablet')`
+        height: 517px;
+        width: 187.5px;
+    `}
+  
+    ${breakpoint('desktop')`
+        height: 600px;
+        width: 450px;
+    `}
 `
 
 export default function CasesPost(){
@@ -50,13 +65,13 @@ export default function CasesPost(){
             <Grid container className='container'>
                 <Grid item className='item'>
                     <CaseImage> 
-                        <p>Marilia Mendonça</p>
+                        <p>Adele Cover</p>
                         <LineSmall />
                     </CaseImage>
                 </Grid>
                 <Grid item className='item'>
                     <CaseImage> 
-                        <p>Pedro Sartori</p>
+                        <p>Sinatra</p>
                         <LineSmall />
                     </CaseImage>
                 </Grid>

@@ -40,7 +40,7 @@ const TitleBlog = styled.h1`
 
 const ImageBox = styled.div`
     display: flex;
-    width: 400px;
+    width: 100%;
     height: 150px;
     margin-bottom: 60px; 
     ${breakpoint('tablet')`
@@ -48,7 +48,7 @@ const ImageBox = styled.div`
       height: 300px;
   `}
     ${breakpoint('desktop')`
-      width: 500px;
+      width: 870px;
       height: 400px;
     `}
 `
