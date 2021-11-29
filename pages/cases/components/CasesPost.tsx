@@ -2,6 +2,7 @@ import { Grid } from "@material-ui/core";
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 import { LineSmall } from "../../../components/Line";
+import Image from 'next/image';
 
 const Container = styled.div`
     display: flex;
@@ -40,13 +41,14 @@ const Container = styled.div`
 `
 
 
-const CaseImage = styled.div`
+const CaseImage = styled.a`
     display: flex;
     flex-direction: column;
     background: #404040;
     height: 517px;
     width: 187.5px;
     align-items: center;
+    text-decoration: none;
     
     ${breakpoint('tablet')`
         height: 517px;
@@ -64,14 +66,14 @@ export default function CasesPost(){
         <Container>
             <Grid container className='container'>
                 <Grid item className='item'>
-                    <CaseImage> 
-                        <p>Adele Cover</p>
+                    <CaseImage href='/cases'> 
+                        <p>Stephanie Lii</p>
                         <LineSmall />
                     </CaseImage>
                 </Grid>
                 <Grid item className='item'>
-                    <CaseImage> 
-                        <p>Sinatra</p>
+                    <CaseImage href='/cases'> 
+                        <p>Gustavo Bing</p>
                         <LineSmall />
                     </CaseImage>
                 </Grid>

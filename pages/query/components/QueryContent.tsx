@@ -1,8 +1,7 @@
 import { LineSmall } from '../../../components/Line';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
-
-
+import { breakpoint } from 'styled-components-breakpoint';
 
 const QueryContainer = styled.div`
     display:  flex;
@@ -40,6 +39,9 @@ const TextBox = styled.text`
     color: #B7B7B7;
     display: flex;
     text-align: center;
+    ${breakpoint('desktop')`
+        font-size: 18px;
+  `}
 `
 
 export default function QueryContent() {

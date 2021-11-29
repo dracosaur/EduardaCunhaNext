@@ -69,19 +69,19 @@ export default function Footer(){
         <QueryContainer>
             <h1>Entre em contato:</h1>
             <QueryContent>
-                <Link href="#">
+                <Link href="#" target='_blank'>
                     <WhatsApp fontSize='large' className='icon' />
                  </Link>
-                <Link href="#">
+                <Link href="https://www.facebook.com/eduardacunhafono" target='_blank'>
                     <Facebook fontSize='large' className='icon' />
                 </Link>
-                <Link href="#">
+                <Link href="https://www.instagram.com/fonoeduardacunha/" target='_blank'>
                     <Instagram  fontSize='large' className='icon' />
                 </Link>
-                <Link href="#">
+                <Link href="#" target='_blank'>
                     <MailOutline fontSize='large' className='icon' />
                 </Link>
-                <Link href="#">
+                <Link href="#" target='_blank'>
                     <Telegram fontSize='large' className='icon' />
                 </Link>
             </QueryContent>

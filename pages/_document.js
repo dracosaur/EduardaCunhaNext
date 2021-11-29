@@ -21,7 +21,9 @@ export default class MyDocument extends Document {
                 <Head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+                <link rel="shortcut icon" href="/Favicon.svg" />
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700;800&display=swap" rel="stylesheet" />
+                <title>Fono Eduarda Cunha</ title>
                 {this.props.styleTags}
                 </Head>
                 <body>
