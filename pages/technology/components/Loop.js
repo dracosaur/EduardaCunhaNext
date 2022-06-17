@@ -2,7 +2,7 @@ import React from "react";
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
-import { banners } from '../../api/banner_mock.json'
+import { bannersMock } from '../../api/mockups/index'
 import banner1 from '../../../public/banner.svg';
 import banner2 from '../../../public/banner2.svg';
 import styled from 'styled-components';
@@ -102,7 +102,7 @@ export const Loop = () => (
       slidesPerView={1}
   >
    {
-      banners.map(({id, image, title}) => (
+      bannersMock.banners.map(({id, image, title}) => (
         <SwiperSlide key={id}>
         <ImageBox>
           <ImageTest >
