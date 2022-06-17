@@ -94,8 +94,8 @@ const PostPage = (props: PostProps) => {
     return (
         <>
             {
-                post && post.map(({coverImage, Titulo, Conteudo}) =>  (
-                    <Container>
+                post && post.map(({ _id, coverImage, Titulo, Conteudo}) =>  (
+                    <Container key={_id}>
                         <TitlePost>
                             <p>Blog</p>
                             <LineSmall />
