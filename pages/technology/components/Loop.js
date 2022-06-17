@@ -2,8 +2,9 @@ import React from "react";
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
-import banner1 from '../../../public/banner.svg'
-import banner2 from '../../../public/banner2.svg'
+import { banners } from '../../api/banner_mock.json'
+import banner1 from '../../../public/banner.svg';
+import banner2 from '../../../public/banner2.svg';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 
@@ -82,42 +83,36 @@ const ImageTest = styled.div`
   `}
 `
 
+const bannerImage = {
+  1: banner1,
+  2: banner2,
+  3: banner1,
+};
+
 export const Loop = () => (
   <LoopContainer>
   <Swiper
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-    speed={800}
-    spaceBetween={0}
-    centeredSlides={true}
-    slidesPerView={1}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[Pagination]}
+      speed={800}
+      spaceBetween={0}
+      centeredSlides={true}
+      slidesPerView={1}
   >
-    <SwiperSlide>
-      <ImageBox>
-        <ImageTest >
-          <Image src={banner1} />
-        </ImageTest>
-        <TextSpacing>Mindvox</TextSpacing>
-      </ImageBox>
-    </SwiperSlide>
-    <SwiperSlide>
-      <ImageBox>
-        <ImageTest >
-          <Image src={banner1} />
-        </ImageTest>
-        <TextSpacing>Mindvox</TextSpacing>
-      </ImageBox>
-    </SwiperSlide>
-    <SwiperSlide>
-      <ImageBox>
-        <ImageTest >
-          <Image src={banner1} />
-        </ImageTest>
-        <TextSpacing>Mindvox</TextSpacing>
-      </ImageBox>
-    </SwiperSlide>
+   {
+      banners.map(({id, image, title}) => (
+        <SwiperSlide key={id}>
+        <ImageBox>
+          <ImageTest >
+            <Image src={bannerImage[image]} />
+          </ImageTest>
+          <TextSpacing>{title}</TextSpacing>
+        </ImageBox>
+      </SwiperSlide>
+      ))
+    }
   </Swiper>
 </LoopContainer>
 )

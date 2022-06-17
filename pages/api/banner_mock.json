@@ -1,0 +1,19 @@
+{
+    "banners": [
+        {
+            "id": 1,
+            "image": 1,
+            "title": "Mindvox"
+        },
+        {
+            "id": 2,
+            "image": 2,
+            "title": "Fotoestimulação"
+        },
+        {
+            "id": 3,
+            "image": 3,
+            "title": "Ultrasom"
+        }
+    ]
+}
