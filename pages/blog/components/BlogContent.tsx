@@ -46,9 +46,12 @@ export default function BlogContent(props: BlogContentProps){
     const [posts, setPosts] = useState<PostProps[]>([]);
 
     useEffect(() => {
-        api.get('/getAllPosts').then(response => {
-            setPosts(response.data.posts)})
+        api.get('/posts').then(({data}) => {
+            setPosts(data)
+        })
     }, []);
+
+    console.log(posts)
 
     return(
         <BlogContainer>
@@ -59,9 +62,9 @@ export default function BlogContent(props: BlogContentProps){
             </TitleBlog>
         }   
             {
-                posts?.map(post => (
-                    <Grid key={post._id}>
-                        <BlogPost Titulo={post.Titulo} coverImage={post.coverImage} _id={post._id} />
+                posts?.map(({Titulo, coverImage, _id})=> (
+                    <Grid key={_id}>
+                        <BlogPost Titulo={Titulo} coverImage={coverImage} _id={_id} />
                     </Grid>
                 ))
             }

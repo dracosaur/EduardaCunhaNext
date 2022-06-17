@@ -77,13 +77,13 @@ const TextBox = styled.text`
 const PostPage = (props: PostProps) => {
     const router = useRouter();
     const { id } = router.query;
-    const [post, setPost] = useState<PostProps>();
+    const [post, setPost] = useState<PostProps[]>();
 
     useEffect(() => {
         if (id) {
             try {
-                api.get(`/getOnePost?id=${id}`).then(response => {
-                    setPost(response.data.posts[0])
+                api.get(`/posts?id=${id}`).then(({data})=> {
+                    setPost(data)
                 })
             } catch (err) {
                 console.log(err);
@@ -94,20 +94,21 @@ const PostPage = (props: PostProps) => {
     return (
         <article>
             {
-                post && (
+                post && post.map(({coverImage, Titulo, Conteudo}) =>  (
                     <Container>
                         <TitlePost>
                             <p>Blog</p>
                             <LineSmall />
                         </TitlePost>
                         <ImageBox>
-                            <img src={post.coverImage} alt={post.Titulo}></img>
+                            <img src={coverImage} alt={Titulo}></img>
                         </ImageBox>
-                        <p>{post.Titulo}</p>
+                        <p>{Titulo}</p>
                         <TextBox>
-                                {post.Conteudo}
+                                {Conteudo}
                         </TextBox>
                     </Container>
+                )
                 )
             }
         </article>

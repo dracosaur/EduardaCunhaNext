@@ -46,7 +46,7 @@ const CaseImage = styled.a`
     flex-direction: column;
     background: #404040;
     height: 517px;
-    width: 187.5px;
+    width: 175px;
     align-items: center;
     text-decoration: none;
     

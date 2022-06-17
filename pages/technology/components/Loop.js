@@ -1,13 +1,46 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React from "react";
+import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
+import banner1 from '../../../public/banner.svg'
+import banner2 from '../../../public/banner2.svg'
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-
 
 const LoopContainer = styled.div`
   width: 300px;
   aling-items: center;
   margin: 24px 0;
+
+  .swiper {
+      width: 100%;
+      height: 100%;
+  }
+
+  .swiper-slide {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .swiper-pagination {
+      bottom: 0px !important;
+
+      .swiper-pagination-bullet {
+          width: 5px;
+          height: 5px;
+      }
+
+      .swiper-pagination-bullet-active {
+          width: 20px !important;
+          height: 5px !important;
+          border-radius: 20px;
+          background-color: #f7af35;
+      }
+  }
 
   ${breakpoint('tablet')`
     width: 600px;
@@ -17,12 +50,9 @@ const LoopContainer = styled.div`
     width: 900px;
   `}
 `
-
 const ImageBox = styled.div`
   aling-items: center;
-  height: 200px;
   padding: 8px;
-  margin: auto;
 
   ${breakpoint('tablet')`
     padding: 16px;
@@ -31,16 +61,6 @@ const ImageBox = styled.div`
   ${breakpoint('desktop')`
     padding: 24px;
   `}
-
-  slick-center h3 {
-    color: #e67e22;
-    opacity: 1;
-    transform: scale(1.08);
-  }
-  h3{
-    opacity: 0.8;
-    transition: all 300ms ease;
-  }
 `
 
 const TextSpacing = styled.p`
@@ -55,46 +75,49 @@ const TextSpacing = styled.p`
 `
 
 const ImageTest = styled.div`
-  height: 235px;
   width: 100%;
-  background: #1d1e1c;
 
   ${breakpoint('desktop')`
-    height: 450px;
+    width: 500px;
   `}
 `
 
-export default class CenterMode extends Component {
-  render() {
-    const settings = {
-      className: "center",
-      centerMode: true,
-      infinite: true,
-      centerPadding: "60px",
-      slidesToShow: 1,
-      speed: 500
-    };
-    return (
-      <LoopContainer>
-        <Slider {...settings}>
-          <ImageBox>
-            <ImageTest />
-            <TextSpacing>Mindvox</TextSpacing>  
-          </ImageBox>
-          <ImageBox>
-            <ImageTest />
-            <TextSpacing>Fotoestimulação</TextSpacing>  
-          </ImageBox>
-          <ImageBox>
-            <ImageTest />
-            <TextSpacing>Ultrassom</TextSpacing>  
-          </ImageBox>
-          <ImageBox>
-            <ImageTest />
-            <TextSpacing>Eletroestimulação</TextSpacing>  
-          </ImageBox>
-        </Slider>
-      </LoopContainer>
-    );
-  }
-}
+export const Loop = () => (
+  <LoopContainer>
+  <Swiper
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+    speed={800}
+    spaceBetween={0}
+    centeredSlides={true}
+    slidesPerView={1}
+  >
+    <SwiperSlide>
+      <ImageBox>
+        <ImageTest >
+          <Image src={banner1} />
+        </ImageTest>
+        <TextSpacing>Mindvox</TextSpacing>
+      </ImageBox>
+    </SwiperSlide>
+    <SwiperSlide>
+      <ImageBox>
+        <ImageTest >
+          <Image src={banner1} />
+        </ImageTest>
+        <TextSpacing>Mindvox</TextSpacing>
+      </ImageBox>
+    </SwiperSlide>
+    <SwiperSlide>
+      <ImageBox>
+        <ImageTest >
+          <Image src={banner1} />
+        </ImageTest>
+        <TextSpacing>Mindvox</TextSpacing>
+      </ImageBox>
+    </SwiperSlide>
+  </Swiper>
+</LoopContainer>
+)

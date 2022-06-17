@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import TechnologyContent from './technology/components/technology';
 import QueryContent from './query/components/QueryContent';
 import CasesContent from './cases/components/CasesContent';
+import "swiper/css/bundle";
 
 const Container = styled.div`
 
