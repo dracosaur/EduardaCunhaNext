@@ -92,7 +92,7 @@ const PostPage = (props: PostProps) => {
     }, [id]);
 
     return (
-        <article>
+        <>
             {
                 post && post.map(({coverImage, Titulo, Conteudo}) =>  (
                     <Container>
@@ -111,7 +111,7 @@ const PostPage = (props: PostProps) => {
                 )
                 )
             }
-        </article>
+        </>
     );
 }
 
