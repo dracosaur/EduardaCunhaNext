@@ -83,36 +83,39 @@ const ImageTest = styled.div`
   `}
 `
 
-const bannerImage = {
-  1: banner1,
-  2: banner2,
-  3: banner1,
-};
+export default function TechnologyContent() {
+  const bannerImage = {
+    1: banner1,
+    2: banner2,
+    3: banner1,
+  };
 
-export const Loop = () => (
+  return (
   <LoopContainer>
-  <Swiper
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Pagination]}
-      speed={800}
-      spaceBetween={0}
-      centeredSlides={true}
-      slidesPerView={1}
-  >
-   {
-      bannersMock.banners.map(({id, image, title}) => (
-        <SwiperSlide key={id}>
-        <ImageBox>
-          <ImageTest >
-            <Image src={bannerImage[image]} />
-          </ImageTest>
-          <TextSpacing>{title}</TextSpacing>
-        </ImageBox>
-      </SwiperSlide>
-      ))
-    }
-  </Swiper>
-</LoopContainer>
-)
+    <Swiper
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        speed={800}
+        spaceBetween={0}
+        centeredSlides={true}
+        slidesPerView={1}
+    >
+      {console.log(bannersMock.banners)}
+    {
+        bannersMock.banners.map(({id, image, title}) => (
+          <SwiperSlide key={id}>
+          <ImageBox>
+            <ImageTest >
+              <Image src={bannerImage[image]} />
+            </ImageTest>
+            <TextSpacing>{title}</TextSpacing>
+          </ImageBox>
+        </SwiperSlide>
+        ))
+      }
+    </Swiper>
+  </LoopContainer>
+  )
+}

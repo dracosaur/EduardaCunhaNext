@@ -1,4 +1,4 @@
-import { Loop } from './Loop';
+import Loop from './Loop';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
 import { breakpoint } from 'styled-components-breakpoint';
