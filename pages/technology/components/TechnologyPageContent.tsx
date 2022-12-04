@@ -74,7 +74,7 @@ const ImageBox = styled.div<any>`
     margin-bottom: 60px; 
 
     ${breakpoint('desktop')`
-        width: 800px;
+        width: 550px;
         height: 400px;
     `}
 `
