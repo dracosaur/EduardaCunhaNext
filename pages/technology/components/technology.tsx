@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from '../../../components/Button';
 import { breakpoint } from 'styled-components-breakpoint';
 import { LineSmall } from '../../../components/Line';
+import { useRouter } from 'next/router';
 
 const TechnologyContainer = styled.div`
     display:  flex;
@@ -49,6 +50,8 @@ const TitleTechnology = styled.div`
     }
 `
 export default function TechnologyContent(){
+    const router = useRouter();
+
     return (
     <TechnologyContainer>
       <TitleTechnology>
@@ -56,7 +59,7 @@ export default function TechnologyContent(){
         <LineSmall />
       </TitleTechnology>
       <Loop />
-      <Button>Conheça mais</Button>
+      <Button onClick={() => router.push('/technology')}>Conheça mais</Button>
     </TechnologyContainer>
     )
 }

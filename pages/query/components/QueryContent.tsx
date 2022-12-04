@@ -2,6 +2,7 @@ import { LineSmall } from '../../../components/Line';
 import styled from 'styled-components';
 import Button from '../../../components/Button';
 import { breakpoint } from 'styled-components-breakpoint';
+import { useRouter } from 'next/router';
 
 const QueryContainer = styled.div`
     display:  flex;
@@ -45,6 +46,8 @@ const TextBox = styled.text`
 `
 
 export default function QueryContent() {
+    const router = useRouter();
+
     return(
         <QueryContainer>
             <TitleQuery>
@@ -54,7 +57,7 @@ export default function QueryContent() {
             <TextBox>
                 Entenda como funciona a consulta, e fique a vontade para tirar suas duvidas.
             </TextBox>
-            <Button>Marcar</Button>
+            <Button onClick={() => router.push('/query')}>Marcar</Button>
         </QueryContainer>
     )
 }

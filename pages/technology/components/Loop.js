@@ -102,7 +102,6 @@ export default function TechnologyContent() {
         centeredSlides={true}
         slidesPerView={1}
     >
-      {console.log(bannersMock.banners)}
     {
         bannersMock.banners.map(({id, image, title}) => (
           <SwiperSlide key={id}>

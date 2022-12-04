@@ -69,7 +69,7 @@ export default function Footer(){
         <QueryContainer>
             <h1>Entre em contato:</h1>
             <QueryContent>
-                <Link href="#" target='_blank'>
+                <Link href="https://wa.me/message/A7VX5TVOS77IO1" target='_blank'>
                     <WhatsApp fontSize='large' className='icon' />
                  </Link>
                 <Link href="https://www.facebook.com/eduardacunhafono" target='_blank'>
@@ -78,10 +78,10 @@ export default function Footer(){
                 <Link href="https://www.instagram.com/fonoeduardacunha/" target='_blank'>
                     <Instagram  fontSize='large' className='icon' />
                 </Link>
-                <Link href="#" target='_blank'>
+                <Link href="mailto:fonoeduardacunha@gmail.com" target='_blank'>
                     <MailOutline fontSize='large' className='icon' />
                 </Link>
-                <Link href="#" target='_blank'>
+                <Link href="https://t.me/+UBYWenU1ot770vyx" target='_blank'>
                     <Telegram fontSize='large' className='icon' />
                 </Link>
             </QueryContent>

@@ -18,6 +18,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 16px;
 
     p {
         font-size: 16px;
@@ -47,16 +48,12 @@ p {
 `
 const ImageBox = styled.div`
     display: flex;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+
     margin-bottom: 60px; 
-    ${breakpoint('tablet')`
-      width: 400px;
-      height: 300px;
-  `}
+
     ${breakpoint('desktop')`
-      width: 500px;
-      height: 400px;
+      width: 600px;
     `}
 
     img {

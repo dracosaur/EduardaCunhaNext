@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { LineMedium, LineSmall } from '../../../components/Line';
-import { breakpoint } from 'styled-components-breakpoint';
-import { technology } from './const.json'
 import { useRouter } from 'next/router';
+import { LineMedium, LineSmall } from '../../components/Line';
+import { breakpoint } from 'styled-components-breakpoint';
+import { technology } from './components/const.json';
+import { useEffect, useState } from 'react';
 
 const Container = styled.div`
     display: flex;
@@ -66,22 +67,30 @@ const Content = styled.div`
     `}
 `
 
-export default function TechnologyPageContent() {
-    return (
+
+export default function SelectedTechnology() {
+    const router = useRouter();
+    const { id }:any = router.query; 
+    const [selectedTechnology, setSelectedTechnology] = useState<any>();
+
+    useEffect(() => {
+        if(id){
+            setSelectedTechnology(technology[id])
+        }
+    }, [])
+
+     return selectedTechnology?.lenght ?
+      (
         <Container>
             <TitleBlog>
-                <p>Recursos</p>
+                <p>{selectedTechnology.title}</p>
                <LineSmall />
             </TitleBlog>
-                {
-                    technology?.map(({title, image, id}, index) => (
-                        <Content key={index} >
-                            <ImageBox bg={image}/>
-                            <LineMedium />
-                            <p>{title}</p>
-                        </Content>
-                    ))
-                }
+                <Content >
+                    <ImageBox bg={selectedTechnology.image}/>
+                    <LineMedium />
+                    <p>{selectedTechnology.text}</p>
+                </Content>
         </Container>
-    )
+    ) : (<></>)
 }

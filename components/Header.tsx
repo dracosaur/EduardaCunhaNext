@@ -3,6 +3,7 @@ import headerImage from '../public/Logo_Branco.png';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 import  MenuComponent  from './Menu';
+import router from 'next/router';
 
 const BackgroundHeader = styled.header`
     background: #f7af35;
@@ -24,7 +25,7 @@ const MenuBar = styled.div`
     justify-content: flex-end;
 `
 
-const ImageBox = styled.a`
+const ImageBox = styled.div`
     width: 157px;
     height: 111px;
 
@@ -37,7 +38,7 @@ const ImageBox = styled.a`
 export default function Header() {
     return(
         <BackgroundHeader>
-            <ImageBox href='/'>
+            <ImageBox onClick={() => router.push('/')}>
                 <Image src={headerImage} alt="Fono-Eduarda"  objectFit='fill'/>
             </ImageBox>
             <MenuBar>

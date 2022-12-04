@@ -47,7 +47,6 @@ export default function MenuComponent() {
         <MenuItem className='menuItem' onClick={handleClose}><Link href='/biography'><Ancor>Biografia</Ancor></Link></MenuItem>
         <MenuItem className='menuItem' onClick={handleClose}><Link href='/blog'><Ancor>Blog</Ancor></Link></MenuItem>
         <MenuItem className='menuItem' onClick={handleClose}><Link href='/technology'><Ancor>Recursos</Ancor></Link></MenuItem>
-        <MenuItem className='menuItem' onClick={handleClose}><Link href='/cases'><Ancor>Cases</Ancor></Link></MenuItem>
         <MenuItem className='menuItem' onClick={handleClose}><Link href='/query'><Ancor>Consulta</Ancor></Link></MenuItem>
       </Menu>
     </div>

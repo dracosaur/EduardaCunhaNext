@@ -17,21 +17,9 @@ const Container = styled.a`
 
 const ImageBoxBlog = styled.div`
     display: flex;
-    width: 252px;
-    height: 180px;
-    ${breakpoint('tablet')`
-      width: 400px;
-      height: 300px;
-  `}
-
-    ${breakpoint('desktop')`
-        width: 877px;
-        height: 388px;
-    `}
 
     img {
         width: 100%;
-        height: 100%;
     }
 `
 

@@ -51,8 +51,6 @@ export default function BlogContent(props: BlogContentProps){
         })
     }, []);
 
-    console.log(posts)
-
     return(
         <BlogContainer>
            {showTitle && 

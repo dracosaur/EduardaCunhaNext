@@ -86,7 +86,7 @@ export default function BiographyContent(){
             <p>CRFa 7 10021</p>
             </Title>
             <TextBox>
-            Formada pela Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA), é preparadora vocal de cantores populares. Prepara participantes dos programas The Voice Brasil, além de atores para espetáculos teatrais cinema e filmes publicitários.
+                Fonoaudióloga formada pela Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA), atua na área de voz, como preparadora vocal de cantores, atores, locutores, jornalistas e demais profissionais da voz. Presta assessoria em gravações, bem como atua na reabilitação vocal. 
             </TextBox>
         </Container>
     );

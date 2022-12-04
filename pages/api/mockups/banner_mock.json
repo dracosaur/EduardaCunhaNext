@@ -3,17 +3,17 @@
         {
             "id": 1,
             "image": 1,
-            "title": "Mindvox"
+            "title": "Fotobioestimulacao "
         },
         {
             "id": 2,
             "image": 2,
-            "title": "Fotoestimulação"
+            "title": "Ultrassom "
         },
         {
             "id": 3,
             "image": 3,
-            "title": "Ultrasom"
+            "title": "MindVox"
         }
     ]
 }

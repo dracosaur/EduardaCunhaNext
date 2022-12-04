@@ -120,25 +120,28 @@ export default function BiographyPageContent(){
                     <p>Eduarda Cunha</p>
                     <p className='CRF'>CRFa 7 10021</p>
                     <TextBox>
-                    Formada pela Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA), é preparadora vocal de cantores populares. Prepara participantes dos programas The Voice Brasil, além de atrizes e atores para espetáculos teatrais cinema e filmes publicitários,
-                    tambem fazendo o acompanhamento de cantores em gravações e shows minisséries.
+                        Formada pela Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA), atua na área de voz há mais de 5 anos, preparando a voz de cantores,  atores, jorrnalistas, locutores e profissionais da voz falada e cantada.
                     <p />
-                    Eduarda desenvolveu uma técnica personalizada de cuidado vocal utilizando recursos e estratégias atuais.   
+                        Eduarda desenvolveu uma técnica personalizada de cuidado vocal utilizando recursos e estratégias atuais.   
                     <p />
                     Sua formação inclui
                     Intercâmbio durante a graduação pelo programa Ciência Sem Fronteiras em Sydney Austrália (2013-1014)
                     Graduação em Fonoaudiologia - UFCSPA
-                    Pós Graduada em Voz Artística pelo Centro de Estudos da Voz (CEV/SP)
-                    Mestre em Patologia pela UFCSPA
-                    Atualmente Doutoranda em Ciências da Saúde pela UFCSPA e Pós Graduanda em Voz Cantada pela FNH.
+                    Pós Graduada em Voz Artística pelo Centro de Estudos da Voz (CEV/SP) e Pós Graduada em Voz Cantada - Ciência, Pedagodia e Arte (FNH/ 2022) Mestre em Patologia pela UFCSPA Certificada pelos métodos: LSTV (Lee Silverman Voice Treatment)
+                    Atualmente Doutoranda em Ciências da Saúde pela UFCSPA 
 
-                    Certificada pelos métodos:
-                    LSTV (Lee Silverman Voice Treatment)
+                    <p />
+                        Sua missão:
+                    <p />
+                   
+                        É cuidar da sua voz, seja reabilitando ou aprimorando, de forma a ter uma melhor performance da sua voz cantada e/ou falada.
+
+                        E eu deixaria a parte de recursos so na HOME PAGE.
+
+                        Em vez de uma pagina so para recursos, eu colocaria TREINAMENTOS e WORKSHOPS - ali colocaria tipo os CARDS de eventos que vou dar ou que ja dei, 
                     </TextBox>
                 </Grid>
             </Grid>
-
-
         </Container>
     )
 }
