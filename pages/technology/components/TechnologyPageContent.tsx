@@ -1,8 +1,33 @@
 import styled from 'styled-components';
 import { LineMedium, LineSmall } from '../../../components/Line';
 import { breakpoint } from 'styled-components-breakpoint';
-import { technology } from './const.json'
-import { useRouter } from 'next/router';
+
+const technology = [
+        {
+            "id": 0,
+            "title": "Mindvox",
+            "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+            "image": ""
+        },
+        {
+            "id": 2,
+            "title": "Fotoestimulação",
+            "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+            "image": "/Tecnologias2.png"
+        },
+        {
+            "id": 3,
+            "title": "Ultrassom",
+            "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+            "image": "/Tecnologias1.png"
+        },
+        {
+            "id": 4,
+            "title": "Eletroestimulação",
+            "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.",
+            "image": "/Tecnologias2.png"
+        }
+]
 
 const Container = styled.div`
     display: flex;
